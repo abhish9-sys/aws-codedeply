@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+   install:
+    runtime_versions:
+      nodejs: 10
+      commands:
+         - apt-get -y install unzip
+
+    build:
+      commands:
+        - echo build started on 'date'
+        - zip hellow.zip ./index.html
+
+       artifacts:
+        type:
+        files:
+          - index.html
+          - appspec.yml
+          - scripts/install_dependencies
+          - scripts/start_server
+          
