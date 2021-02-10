@@ -11,8 +11,7 @@ phases:
       commands:
         - echo build started on 'date'
         - zip hellow.zip ./index.html
-
-       artifacts:
+    artifacts:
         type:
         files:
           - index.html
